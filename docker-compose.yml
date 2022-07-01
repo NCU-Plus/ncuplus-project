@@ -5,6 +5,8 @@ services:
     restart: always
     env_file:
       - ./backend/.env
+    environment:
+      - TZ=Asia/Taipei
   frontend:
     image: ppodds/ncuplus-frontend:latest
     restart: always
@@ -12,6 +14,8 @@ services:
       - backend
     env_file:
       - ./frontend/.env
+    environment:
+      - TZ=Asia/Taipei
   nginx:
     build:
       context: "./nginx"
@@ -21,3 +25,5 @@ services:
     ports:
       - 80:80
       - 443:443
+    environment:
+      - TZ=Asia/Taipei
