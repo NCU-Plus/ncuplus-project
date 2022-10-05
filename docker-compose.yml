@@ -3,6 +3,8 @@ services:
   backend:
     image: ppodds/ncuplus-backend:latest
     restart: always
+    volumes:
+      - ./backend/uploads:/home/node/app/uploads
     env_file:
       - ./backend/.env
     environment:
