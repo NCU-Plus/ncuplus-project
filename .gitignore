@@ -1,1 +1,5 @@
 *.env
+backend/uploads
+backup*.tar
+nginx/ssl/*.pem
+nginx/dhparam.pem

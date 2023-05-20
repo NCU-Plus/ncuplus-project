@@ -22,8 +22,6 @@ services:
     build:
       context: "./nginx"
     restart: always
-    volumes:
-      - /var/www/_letsencrypt:/var/www/_letsencrypt
     ports:
       - 80:80
       - 443:443
